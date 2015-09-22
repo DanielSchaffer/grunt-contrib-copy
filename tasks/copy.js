@@ -45,6 +45,10 @@ module.exports = function(grunt) {
       isExpandedPair = filePair.orig.expand || false;
 
       filePair.src.forEach(function(src) {
+        if (filePair.cwd) {
+          src = path.resolve(filePair.cwd, src);
+        }
+
         src = unixifyPath(src);
         dest = unixifyPath(dest);
 
