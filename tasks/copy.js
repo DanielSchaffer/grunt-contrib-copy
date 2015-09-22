@@ -48,7 +48,6 @@ module.exports = function(grunt) {
         var dest = unixifyPath(filePair.dest);
 
         src = unixifyPath(src);
-        dest = unixifyPath(dest);
         relativeSrc = src;
 
         if (filePair.cwd) {
